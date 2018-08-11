@@ -1,0 +1,8 @@
+package com.cg.onlinebookshop.pojo;
+
+public class AddedBookInCart {
+
+    private Book book;
+    private int noofBookAdded;
+	
+}

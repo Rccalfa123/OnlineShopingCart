@@ -1,0 +1,32 @@
+package com.cg.onlinebookshop.pojo;
+
+public class AddedBookInCart {
+
+    private Book book;
+    private int noofBookAdded;
+	
+    public Book getBook() {
+		return book;
+	}
+	public void setBook(Book book) {
+		this.book = book;
+	}
+	public int getNoofBookAdded() {
+		return noofBookAdded;
+	}
+	public void setNoofBookAdded(int noofBookAdded) {
+		this.noofBookAdded = noofBookAdded;
+	}
+	@Override
+	public String toString() {
+		return "AddedBookInCart [book=" + book + ", noofBookAdded=" + noofBookAdded + "]";
+	}
+	public AddedBookInCart(Book book) {
+		super();
+		this.book = book;
+		this.noofBookAdded = noofBookAdded;
+	}
+	
+	
+	
+}

@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+ <form action=".app" method="get">
+	
+		<div>
+			<table cellspacing="15" align = "center" border="dotted" >
+				<tr>
+					<th colspan="6" height="35"><h2>Your Cart</h2></th>
+				</tr>
+			  <tr>
+					<th height="20">Book Id</th>
+					<th height="20">Book Name</th>
+					<th height="20">Book Description</th>
+					<th height="20">Book Price</th>
+					
+				</tr>
+			
+			<alfa:forEach var="books"  items="${sessionScope.availableBooks}">	
+			<tr>
+					<td align="center">${books.bookId}</td>
+					<td align="center">${books.bookName}</td>
+					<td align="center">${books.bookDescription}</td>
+					<td align="center">${books.bookPrice}</td>
+					<td align="center"  colspan="2"><a href="addnew.app?bookId=${books.bookId}">Add to Cart</a></td>
+			</tr>
+			</alfa:forEach>	
+					</table>
+		</div>
+	
+	</form>
+ 
+
+
+</body>
+</html>

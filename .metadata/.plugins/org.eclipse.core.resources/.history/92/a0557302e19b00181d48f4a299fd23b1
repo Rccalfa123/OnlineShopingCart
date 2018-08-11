@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+body {
+    background-color: aqua;
+}
+
+h1 {
+    color: navy;
+}
+
+td{
+	
+ font-family: sans-serif;
+ font-style: oblique;
+	
+}

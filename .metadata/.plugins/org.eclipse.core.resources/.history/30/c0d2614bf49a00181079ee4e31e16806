@@ -1,0 +1,23 @@
+package com.cg.onlinebookshop.pojo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Cart {
+
+	private int count;
+	private Map<Integer,String> books = new HashMap<Integer, String>();
+
+	
+	public addNewBook(String book)
+	{
+		
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Cart [count=" + count + ", books=" + books + "]";
+	}	
+    	
+}

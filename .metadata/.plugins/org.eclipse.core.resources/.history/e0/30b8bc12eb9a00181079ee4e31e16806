@@ -1,0 +1,13 @@
+package com.cg.onlinebookshop.pojo;
+
+public class Cart {
+
+	private String[] items;
+
+	@Override
+	public String toString() {
+		return "Cart [items=" + items + "]";
+	}
+	
+	
+}

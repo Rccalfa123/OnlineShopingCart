@@ -1,0 +1,6 @@
+package com.cg.onlinebookshop.pojo;
+
+public class Cart {
+
+	private String items;
+}

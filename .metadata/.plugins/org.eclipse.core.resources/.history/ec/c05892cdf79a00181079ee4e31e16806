@@ -1,0 +1,28 @@
+package com.cg.onlinebookshop.servicelayer;
+
+import java.util.Collection;
+
+import com.cg.onlinebookshop.pojo.Cart;
+
+public class Servicelayer {
+
+CartDao cartdao = new CartDao(); 
+	
+	public void addnewBook(String book)
+	{
+	  cart.addNewBook(book);
+	}
+	
+	public void removebook(String book)
+	{
+		cart.removebook(book);
+	}
+	
+	public Collection<String> ViewCart()
+	{
+		return cart.ViewCart();
+	}
+	
+	
+	
+}

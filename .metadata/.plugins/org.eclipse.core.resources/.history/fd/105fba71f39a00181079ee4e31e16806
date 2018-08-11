@@ -1,0 +1,12 @@
+package com.cg.onlinebookshop.pojo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Cart {
+
+	Map<Integer,String> books = new HashMap<Integer, String>();
+
+	
+    	
+}

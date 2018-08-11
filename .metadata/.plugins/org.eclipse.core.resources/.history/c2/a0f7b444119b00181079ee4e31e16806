@@ -1,0 +1,5 @@
+package com.cg.onlinebookshop.dao;
+
+public interface CartDao {
+
+}

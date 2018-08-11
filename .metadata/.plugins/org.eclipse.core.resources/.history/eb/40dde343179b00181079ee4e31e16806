@@ -1,0 +1,29 @@
+package com.cg.onlinebookshop.servicelayer;
+
+import java.util.Collection;
+
+import com.cg.onlinebookshop.dao.CartDaoImpl;
+import com.cg.onlinebookshop.pojo.Book;
+
+public class ServicelayerImpl {
+
+	CartDaoImpl cartdaoImpl = new CartDaoImpl(); 
+	
+	public void addnewBook(Book book)
+	{
+	  cartdaoImpl.addNewBook(book);
+	}
+	
+	public void removebook(Book book)
+	{
+		cartdaoImpl.removebook(book);
+	}
+	
+	public Collection<Book> ViewCart()
+	{
+		return cartdaoImpl.ViewCart();
+	}
+	
+	
+	
+}

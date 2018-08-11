@@ -1,0 +1,22 @@
+package com.cg.onlinebookshop.pojo;
+
+import java.util.Arrays;
+
+public class Cart {
+
+	private String[] items;
+
+	@Override
+	public String toString() {
+		return "Cart [items=" + Arrays.toString(items) + "]";
+	}
+
+	public String[] getItems() {
+		return items;
+	}
+
+	public void setItems(String[] items) {
+		this.items = items;
+	}
+    	
+}

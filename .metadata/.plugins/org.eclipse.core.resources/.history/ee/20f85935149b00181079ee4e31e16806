@@ -1,0 +1,63 @@
+package com.cg.onlinebookshop.dao;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.cg.onlinebookshop.pojo.AddedBookInCart;
+import com.cg.onlinebookshop.pojo.Book;
+
+public class CartDaoImpl {
+	
+	private static Map<Integer,Book> books = new HashMap<Integer, Book>();
+	
+	private Map<Integer,AddedBookInCart> addedBooks = new HashMap<Integer, AddedBookInCart>();
+	
+	private static Book mathematics = new Book(1, "Maths", "Fundamentals of Algebra", 599);
+	private static Book science = new Book(2, "Science", "Science with fact", 499);
+	private static Book civics = new Book(3, "Civics", "Civics in Modern World", 299);
+	private static Book java = new Book(4, "Java", "Head First Java", 999);
+	private static Book spring = new Book(5, "Spring", "Spring in Hand", 799);
+	private static Book jee = new Book(6, "JEE", "JEE Magics", 899);
+	private static Book dotnet = new Book(7, "Dotnet", "Dotnet in Capsule", 199);
+	private static Book english = new Book(8, "English", "English in Simple Words", 99);
+	private static Book history = new Book(9, "History", "Ancient History", 499);
+static
+	{
+		books.put(mathematics.getBookId(), mathematics);
+		books.put(science.getBookId(), science);
+		books.put(civics.getBookId(), civics);
+		books.put(java.getBookId(), java);
+		books.put(spring.getBookId(), spring);
+		books.put(jee.getBookId(), jee);
+		books.put(dotnet.getBookId(), dotnet);
+		books.put(english.getBookId(), english);
+		books.put(history.getBookId(), history);
+		
+	}
+	
+	public void addBookIntoCarT(Book book)
+	{
+		  if(addedBooks.get(book.getBookId()) != null)  
+		    {
+			  AddedBookInCart addedBookInCart = new AddedBookInCart(book);
+			  int count = addedBookInCart.getNoofBookAdded()+1;
+			  addedBookInCart.setNoofBookAdded(count);
+			  addedBooks.put(book.getBookId(),addedBookInCart);
+		    }
+		  else
+		  {
+			  
+		  }
+	}
+	
+	public void removeBookFromCart(Book book)
+	{
+		addedBooks.remove(book.getBookId());
+	}
+	
+	public Collection<Book> ViewCart()
+	{
+		return addedBooks.values();
+	}
+}
